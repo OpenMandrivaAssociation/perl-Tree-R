@@ -1,41 +1,34 @@
-%define		pdir	Tree
-%define		pnam	R
-Summary:	Tree::R - Perl extension for the Rtree data structure and algorithms
-Name:		perl-Tree-R
-Version:	0.06
+%define upstream_name    Tree-R
+%define upstream_version 0.06
+
+Summary:	Perl extension for the Rtree data structure and algorithms
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
 Release:	%mkrel 1
-License:	GPL
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/A/AJ/AJOLMA/%{pdir}-%{pnam}-%{version}.tar.gz
-URL:		http://cpansearch.perl.org/src/AJOLMA/
+Url:        	http://search.cpan.org/dist/%{upstream_name}
+Source0:    	http://www.cpan.org/modules/by-module/Tree/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:	perl-devel >= 1:5.8.0
-
+BuildArch:	noarch
 %description
-Tree::R - Perl extension for the Rtree data structure and algorithms
-
+R-tree is a data structure for storing and indexing and efficiently looking
+up non-zero-size spatial objects.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%__perl Makefile.PL \
-     INSTALLDIRS=
-
+%__perl Makefile.PL INSTALLDIRS=vendor
 %make
 
-
 %install
-rm -rf $RPM_BUILD_ROOT
-
+rm -rf %{buildroot}
 %makeinstall_std
 
 %files
 %defattr(-,root,root) 
 %doc Changes README
-%{perl_sitelib}/Tree/R.pm
-%{perl_sitelib}/auto/Tree/R/autosplit.ix
-%{_usr}/local/share/man/man3/Tree::R.3pm
-
-
-
-
+%{perl_vendorlib}/Tree/R.pm
+%{perl_vendorlib}/auto/Tree/R
+%{_mandir}/man3/Tree::R.3pm.*
