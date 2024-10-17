@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	3
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:        	http://search.cpan.org/dist/%{upstream_name}
+Url:        	https://search.cpan.org/dist/%{upstream_name}
 Source0:    	http://www.cpan.org/modules/by-module/Tree/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildArch:	noarch
