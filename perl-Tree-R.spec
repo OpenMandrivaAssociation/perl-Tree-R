@@ -1,14 +1,14 @@
 %define upstream_name    Tree-R
-%define upstream_version 0.06
+%define upstream_version 0.072
 
 Summary:	Perl extension for the Rtree data structure and algorithms
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:        	https://search.cpan.org/dist/%{upstream_name}
-Source0:    	http://www.cpan.org/modules/by-module/Tree/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        	https://github.com/ajolma/Tree-R
+Source0:    	https://cpan.metacpan.org/authors/id/A/AJ/AJOLMA/Tree-R-%{upstream_version}.tar.gz
 BuildRequires:	make
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildArch:	noarch
