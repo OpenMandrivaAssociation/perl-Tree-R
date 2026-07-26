@@ -1,14 +1,12 @@
 %define upstream_name    Tree-R
-%define upstream_version 0.072
-
 Summary:	Perl extension for the Rtree data structure and algorithms
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.072
+Release:	2
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:        	https://github.com/ajolma/Tree-R
-Source0:    	https://cpan.metacpan.org/authors/id/A/AJ/AJOLMA/Tree-R-%{upstream_version}.tar.gz
+Source0:    	https://cpan.metacpan.org/authors/id/A/AJ/AJOLMA/Tree-R-%{version}.tar.gz
 BuildRequires:	make
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildArch:	noarch
@@ -17,7 +15,7 @@ R-tree is a data structure for storing and indexing and efficiently looking
 up non-zero-size spatial objects.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
