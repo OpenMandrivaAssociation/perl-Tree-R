@@ -1,12 +1,13 @@
 %define upstream_name    Tree-R
+%define upstream_version 0.072
 Summary:	Perl extension for the Rtree data structure and algorithms
 Name:		perl-%{upstream_name}
 Version:	0.072
-Release:	2
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:        	https://github.com/ajolma/Tree-R
-Source0:    	https://cpan.metacpan.org/authors/id/A/AJ/AJOLMA/Tree-R-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AJ/AJOLMA/Tree-R-0.072.tar.gz
 BuildRequires:	make
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildArch:	noarch
@@ -32,16 +33,4 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/auto/Tree/R
 %{_mandir}/man3/Tree::R.3pm.*
 
-
-%changelog
-* Thu Nov 04 2010 Jani Välimaa <wally@mandriva.org> 0.60.0-1mdv2011.0
-+ Revision: 593399
-- use perl_convert_version macro
-- fix summary, description, license, source and URL
-- tag package as noarch
-- install files to a correct location
-
-* Sun Oct 31 2010 Thomas Spuhler <tspuhler@mandriva.org> 0.06-1mdv2011.0
-+ Revision: 591223
-- import perl-Tree-R
 
