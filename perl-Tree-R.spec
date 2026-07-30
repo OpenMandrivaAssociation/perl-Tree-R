@@ -3,7 +3,7 @@
 Summary:	Perl extension for the Rtree data structure and algorithms
 Name:		perl-%{upstream_name}
 Version:	0.072
-Release:	2
+Release:	3
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:        	https://github.com/ajolma/Tree-R
@@ -19,7 +19,7 @@ up non-zero-size spatial objects.
 %setup -q -n Tree-R-0.072
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %install
