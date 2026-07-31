@@ -3,7 +3,7 @@
 Summary:	Perl extension for the Rtree data structure and algorithms
 Name:		perl-%{upstream_name}
 Version:	0.072
-Release:	10
+Release:	11
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:        	https://github.com/ajolma/Tree-R
